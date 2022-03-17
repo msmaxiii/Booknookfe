@@ -19,21 +19,21 @@ axios
     dispatch({type:FETCH_BOOK_FAIL,payload:err.message})
 })
 }
-export const add_BOOK = (book)=>(dispatch)=>{
+export const addBook = (book)=>(dispatch)=>{
     dispatch({type:FETCH_BOOK_START})
     axios
     .post("https://booknook2.herokuapp.com/book",book)
     .then(data=> dispatch ({type:ADD_BOOK, payload:data.data.bookitem}))
     .catch(err=> dispatch ({type:FETCH_BOOK_FAIL, payload:err.message}))
 }
-export const update_BOOK = (id, update)=> (dispatch)=>{
+export const updateBook = (id, update)=> (dispatch)=>{
     dispatch({type:FETCH_BOOK_START})
     .put(`https://booknook2.herokuapp.com/book/${id}`)
-    .then(data => dispatch ({type:REMOVE_BOOK,payload:book}))
+    .then(data => dispatch ({type:REMOVE_BOOK,payload:data}))
     .catch(err => dispatch({type:FETCH_BOOK_FAIL, payload:err.message}))
 }
 
-export const remove_BOOK=(id,book)=>(dispatch)=>{
+export const removeBook=(id,book)=>(dispatch)=>{
     dispatch ({type:FETCH_BOOK_START})
     axios
     .delete(`https://booknook2.herokuapp.com/book/${id}`)

@@ -1,37 +1,33 @@
 import { useState } from 'react';
-import { connect} from '../action/actions'
+import { connect } from 'react-redux'
 import Book from './Bookitem'
 import { useEffect } from 'react';
+import { fetchBook } from '../action/actions';
+
 
 const MapStateToProps =(state)=>({
-    Booklist: state.Booklist,
+    booklist: state.Booklist,
     isFetching:state.isFetching,
     error:state.error,
 })
 
 function Booklist (props){
-    console.log(props)
+    // console.log(props)
+    useEffect(()=>{
+        props.fetchBook()
+    },[])
+
+    return(
+
+        <div className ='booklist-container'>
+            {props.isFetching ? 'FetchingBook':""}
+            {props.error ? props.error:""}
+            {props.booklist && props.booklist.map(book =>
+                <Book book ={book}order={false} key={book.id}/>)}
+
+        </div>
+    )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 const Form = (props)=>{
@@ -101,4 +97,4 @@ return(
 );
 };
 
-export default Form;
+export default connect(MapStateToProps,{fetchBook})(Booklist)
