@@ -2,7 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Project styled with gridlayoutit
+--Project styled with gridlayoutit
+--YouTube video CSS Grid Layout with Background Image
 
 ## Available Scripts
 

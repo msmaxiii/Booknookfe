@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Booklist from './Components/Booklist'
+import UserOrder from './Components/UserOrder'
+import Bookitem from './Components/Bookitem'
+import UserOrderlist from './Components/UserOrderlist'
+import NavBar from './Components/NavBar'
+import Footer from './Components/Footer'
+import Home from './Components/Home'
+import About from './Components/About'
+import { useEffect } from 'react'
+import { fetchBook }from './action/actions'
+import { connect } from 'react-redux'
 
-function App() {
+const mapStateToProps = (state) => ({
+  isLoading: state.isLoading,
+  error: state.error
+})
+
+function App(props) {
+  useEffect(()=>{
+    props.fetchBook()
+},[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      
+      <NavBar/>
+      <Home/>
+      <About/>
+      {/* <Booklist/> */}
+
+      <Footer/>
+      
     </div>
   );
 }
 
-export default App;
+export default connect(mapStateToProps, {fetchBook})(App)
