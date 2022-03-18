@@ -1,17 +1,23 @@
 
  
- 
- 
- 
- 
- 
   /* body{
   margin: 15 px;
   padding: 0;
 }  */
- /* .background{
-  background: url();
-}   */
+h1{
+  text-align: center;
+}
+
+.bookList {
+  position: relative;
+  width: 16rem;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  padding: 30px;
+  border-radius: 2rem;
+  margin: 2rem;
+}
 
 
  .grid-container {  display: grid;
@@ -23,17 +29,22 @@
     "Nav Nav Nav"
     "body body body"
     "footer footer footer";
+    background-image: url("../src/image/bookcase3.jpeg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .Nav { grid-area: Nav; }
 
 .footer { grid-area: footer;
   
-    justifyContent:center;
+    justify-content:center;
     margin:'20px';
     height:'60px';
     padding:'1000 px';
-    backgroundColor:"";
+    background-color:"";
  }
 
 .body {  display: grid;
@@ -46,7 +57,11 @@
     "B4 B5 B6"
     "B7 B8 B9";
   grid-area: body;
+ 
 }
+
+
+
 
 .B1 { grid-area: B1; }
 

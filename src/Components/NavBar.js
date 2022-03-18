@@ -13,7 +13,7 @@ const NavBar =()=>{
 const container ={
     display: "flex",
     justifyContent: "space-around",
-    backgroundColor: "#d96b26",
+    backgroundColor: "#e98416",
     height: "50px"
  
 }

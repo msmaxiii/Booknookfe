@@ -1,9 +1,10 @@
 import data from '../dummyData'
 
-import { FETCH_BOOK_START, FETCH_BOOK_ORDERED, FETCH_BOOK_FAIL,ADD_BOOK, REMOVE_BOOK, UPDATE_BOOK, } from '../action/actions';
+import { FETCH_BOOK_START, FETCH_BOOK_ORDERED, FETCH_BOOK_FAIL,ADD_BOOK, REMOVE_BOOK, UPDATE_BOOK,USER_ORDER } from '../action/actions';
 
 const initialState ={
     BookData:[],
+    UserOrder:[],
     isLoading:false,
     error:''
 }
@@ -45,10 +46,11 @@ export default function reducer (state = initialState,action){
             }
             default:
                 return state
+        
+        case USER_ORDER:
+            return{
+                ...state,UserOrder:[...state.UserOrder,action.payload]
+            }    
         }
-    }                
-
-
-
-
-
+    }
+                   

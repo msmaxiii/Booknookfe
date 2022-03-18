@@ -6,6 +6,7 @@ export const FETCH_BOOK_FAIL ="FETCH_BOOK_FAIL"
 export const ADD_BOOK = "ADD_BOOK"
 export const UPDATE_BOOK ="UPDATE_BOOK"
 export const REMOVE_BOOK ="REMOVE_BOOK"
+export const USER_ORDER ="ORDER"
 
 export const fetchBook =()=>(dispatch)=>{
     dispatch({type:FETCH_BOOK_START})
@@ -40,6 +41,11 @@ export const removeBook=(id,book)=>(dispatch)=>{
     .delete(`https://booknook2.herokuapp.com/book/${id}`)
     .then(data => dispatch({type: REMOVE_BOOK, payload: book}))
     .catch(err => dispatch({type: FETCH_BOOK_FAIL, payload: err.message}))
+}
+export const userOrder =(order)=>(dispatch)=>{
+    dispatch ({type:USER_ORDER, payload: order})
+    
+    
 }
 
 

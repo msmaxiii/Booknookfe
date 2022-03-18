@@ -70,7 +70,14 @@ const dummyData=[
         author:"Stuart Woods",
         category:"nonfiction",
         image:"https://m.media-amazon.com/images/I/91xKt2oF4QL._AC_UY218_.jpg"
-    } 
+    },
+    {
+        title:"Black Dog",
+        author:"Stuart Woods",
+        category:"nonfiction",
+        image:"https://m.media-amazon.com/images/I/614t44FjJ7L._AC_UY218_.jpg"
+    }
+
 
     
 ]
