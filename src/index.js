@@ -9,13 +9,11 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <Router>
-    <Provider store ={Store}>
-
   <React.StrictMode>
+  <Provider store ={Store}>
     <App />
+    </Provider>
   </React.StrictMode>,
-  
-  </Provider>
   </Router>,
   document.getElementById('root')
 );

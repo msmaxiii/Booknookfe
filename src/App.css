@@ -1,19 +1,25 @@
- /* body{
+
+ 
+ 
+ 
+ 
+ 
+ 
+  /* body{
   margin: 15 px;
   padding: 0;
-} */
-/* .background{
-  background: url(bookcase2.jpeg);
 }  */
+ /* .background{
+  background: url();
+}   */
 
-/* 
- .container {  display: grid;
+
+ .grid-container {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.3fr 0.2fr 3.3fr 0.2fr;
   gap: 4px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "header header header"
     "Nav Nav Nav"
     "body body body"
     "footer footer footer";
@@ -21,9 +27,14 @@
 
 .Nav { grid-area: Nav; }
 
-.header { grid-area: header; }
-
-.footer { grid-area: footer; }
+.footer { grid-area: footer;
+  
+    justifyContent:center;
+    margin:'20px';
+    height:'60px';
+    padding:'1000 px';
+    backgroundColor:"";
+ }
 
 .body {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -54,4 +65,4 @@
 .B8 { grid-area: B8; }
 
 .B9 { grid-area: B9; }
- */
+ 

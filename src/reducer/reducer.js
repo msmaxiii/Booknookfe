@@ -26,10 +26,18 @@ export default function reducer (state = initialState,action){
             return{...state,book:[...state.book,action.payload]
             }
         case UPDATE_BOOK:
-            return{
-                
-            }    
-               
+            let updatedState=[]
+            for (let i = 0; i< state.BookData.length; i++){
+                if (state.BookData[i]._id === action.payload._id){
+                    updatedState.push(action.payload)
+                } else{
+                    updatedState.push(state.Book[i])
+                }
+            }
+            return {
+                ...state, ToDoData: updatedState
+            }
+  
         case REMOVE_BOOK:
             let newState = state.book.filter(book=>book!==action.payload)
             return{

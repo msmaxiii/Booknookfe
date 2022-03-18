@@ -13,7 +13,8 @@ export const fetchBook =()=>(dispatch)=>{
 axios
 .get("https://booknook2.herokuapp.com/book/")
 .then(data=>{
-    dispatch({type:FETCH_BOOK_ORDERED,payload:data.data.bookItem})
+    console.log(data.data.books)
+    dispatch({type:FETCH_BOOK_ORDERED,payload:data.data.books})
 })
 .catch(err=>{
     dispatch({type:FETCH_BOOK_FAIL,payload:err.message})

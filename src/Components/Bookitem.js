@@ -13,8 +13,8 @@ const Book = (props)=>{
     return(
         <div className='book-container'> 
         <h1>bookItem</h1>
-        {/* <h3>{props.book.title}</h3> */}
-            {/* <img src={props.book.image}alt='books'/> */}
+        <h3>{props.book.title}</h3>
+            <img src={props.book.image}alt='books'/>
             <div>
                 
             </div>
