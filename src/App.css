@@ -60,9 +60,6 @@ h1{
  
 }
 
-
-
-
 .B1 { grid-area: B1; }
 
 .B2 { grid-area: B2; }
@@ -80,4 +77,5 @@ h1{
 .B8 { grid-area: B8; }
 
 .B9 { grid-area: B9; }
- 
+
+
