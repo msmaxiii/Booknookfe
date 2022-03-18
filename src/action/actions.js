@@ -13,7 +13,7 @@ export const fetchBook =()=>(dispatch)=>{
 axios
 .get("https://booknook2.herokuapp.com/book/")
 .then(data=>{
-    dispatch({type:FETCH_BOOK_ORDERED,payload:data.data.bookitem})
+    dispatch({type:FETCH_BOOK_ORDERED,payload:data.data.bookItem})
 })
 .catch(err=>{
     dispatch({type:FETCH_BOOK_FAIL,payload:err.message})
@@ -23,7 +23,7 @@ export const addBook = (book)=>(dispatch)=>{
     dispatch({type:FETCH_BOOK_START})
     axios
     .post("https://booknook2.herokuapp.com/book",book)
-    .then(data=> dispatch ({type:ADD_BOOK, payload:data.data.bookitem}))
+    .then(data=> dispatch ({type:ADD_BOOK, payload:data.data.bookItem}))
     .catch(err=> dispatch ({type:FETCH_BOOK_FAIL, payload:err.message}))
 }
 export const updateBook = (id, update)=> (dispatch)=>{

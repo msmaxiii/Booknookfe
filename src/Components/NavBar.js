@@ -5,7 +5,7 @@ const NavBar =()=>{
         <nav style = {container}>
             <Link to ='/' style={{color:"#6b26d9"}}>Home</Link>
             <Link to ='/About'>About</Link>
-            <Link to ='/Booklist'>Books</Link>
+            <Link to ='/BookList'>Books</Link>
             <Link to ='/UserOrder'>Order</Link>
         </nav>
     )

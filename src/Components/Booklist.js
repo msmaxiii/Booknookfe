@@ -1,29 +1,30 @@
 import { useState } from 'react';
 import { connect } from 'react-redux'
-import Book from './Bookitem'
+import Book from './BookItem'
 import { useEffect } from 'react';
 import { fetchBook } from '../action/actions';
 
 
 const MapStateToProps =(state)=>({
-    booklist: state.Booklist,
+    bookList: state.BookData,
     isFetching:state.isFetching,
     error:state.error,
 })
 
-function Booklist (props){
+function BookList (props){
     // console.log(props)
     useEffect(()=>{
-        props.fetchBook()
+        // props.fetchBook()
     },[])
-
+    // console.log(props.bookList)
     return(
-
-        <div className ='booklist-container'>
-            {props.isFetching ? 'FetchingBook':""}
-            {props.error ? props.error:""}
-            {props.booklist && props.booklist.map(book =>
-                <Book book ={book}order={false} key={book.id}/>)}
+        
+        <div className ='bookList-container'>
+            {/* <h1>book pg</h1> */}
+            {/* {props.isFetching ? 'FetchingBook':""}
+            {props.error ? props.error:""} */}
+            {props.bookList ? props.bookList.map(book =>
+             <Book book={book} />):"loading"}
 
         </div>
     )
@@ -36,26 +37,26 @@ const Form = (props)=>{
   const [phone,setPhone]=useState('');
   const [order,setOrder]=useState('')
 
-  const handleSubmit =(e) =>{
-    e.preventDefault();
+//   const handleSubmit =(e) =>{
+//     e.preventDefault();
 
 
-    const newContact ={
-      name:name,
-      email:email,
-      phone:phone,
-      order:order
+//     const newContact ={
+//       name:name,
+//       email:email,
+//       phone:phone,
+//       order:order
 
-    }
-console.log(newContact);
+//     }
+// console.log(newContact);
   
-props.setUserData(prevState=>[newContact,...prevState]);
-  }
+// props.setUserData(prevState=>[newContact,...prevState]);
+//   }
 return(
 <div>
  <h2>Add Contact Information and Order</h2>
 
-    <form onSubmit={handleSubmit}>
+    <form>
       <label htmlFor='name'>Name</label>
       <input
       type='text'
@@ -97,4 +98,4 @@ return(
 );
 };
 
-export default connect(MapStateToProps,{fetchBook})(Booklist)
+export default connect(MapStateToProps,{fetchBook})(BookList)

@@ -1,8 +1,9 @@
 import { connect} from 'react-redux'
+import dummyData from '../dummyData'
 import { addBook,updateBook,removeBook,}from '../action/actions'
 
 const Book = (props)=>{
- 
+//  console.log(props.book)
     const handleBook =(e)=>{
         console.log (e.target.id)
         props.addBook(e.target.id);
@@ -11,9 +12,11 @@ const Book = (props)=>{
     }
     return(
         <div className='book-container'> 
-            <img src/>
+        <h1>bookItem</h1>
+        {/* <h3>{props.book.title}</h3> */}
+            {/* <img src={props.book.image}alt='books'/> */}
             <div>
-                button id ={props}
+                
             </div>
             </div>
     )

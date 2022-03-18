@@ -11,7 +11,7 @@ export default function reducer (state = initialState,action){
     switch (action.type){
         case FETCH_BOOK_START:
             return{
-                ...state,BookData:state.BookData,error:"", isLoading:true
+                ...state,BookData:[...state.BookData],error:"", isLoading:true
             }
         case FETCH_BOOK_FAIL:
             return{

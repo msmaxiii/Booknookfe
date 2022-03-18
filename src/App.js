@@ -1,8 +1,9 @@
 import './App.css';
-import Booklist from './Components/Booklist'
-import UserOrder from './Components/UserOrder'
-import Bookitem from './Components/Bookitem'
-import UserOrderlist from './Components/UserOrderlist'
+import BookList from './Components/BookList'
+// import UserOrder from './Components/UserOrder'
+import BookItem from './Components/BookItem'
+import UserOrderList from './Components/UserOrderList'
+// import {Switch, Route} from 'react-router-dom'
 import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
 import Home from './Components/Home'
@@ -21,14 +22,16 @@ function App(props) {
     props.fetchBook()
 },[])
   return (
-    <div className="App">
-      
-      
+    < div className="App">
       <NavBar/>
       <Home/>
       <About/>
-      {/* <Booklist/> */}
-
+      
+      <BookItem />
+      {props.isLoading ? "Book LIST IS LOADING" : "Book LIST LOADED" }
+      <BookList />
+      {props.error !== "" ? props.error : ""}
+      
       <Footer/>
       
     </div>
