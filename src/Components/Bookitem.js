@@ -16,7 +16,11 @@ const Book = (props)=>{
         <h3>{props.book.title}</h3>
             <img src={props.book.image}alt='books'/>
             <div>
-                
+            <button id ={props.book.id}onClick={handleBook}>
+
+{props.books ?'Remove from Order':'Add to Order'}
+</button>
+
             </div>
             </div>
     )
