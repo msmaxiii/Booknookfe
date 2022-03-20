@@ -21,16 +21,15 @@ h2{
   text-align: center;
   font-size: 100px;
   color:#29a8d6 ;
-  /* background-color:#cd29d6 ; */
+  
 }
 
 p{
-  
   text-align: center;
   font-style: italic;
   font-size: 50px;
   color:#29a8d6;
-  /* background-color:#cd29d6 ; */
+ 
 }
 #box1{
   display:flex;
@@ -44,13 +43,13 @@ p{
 
 }
 .B2{
-  display:flex;
+  
   padding: 30px;
   margin-left: 100px; 
   margin-top: 260px; 
 }
  .B3{
-  display:flex;
+ 
   padding: 30px;
   margin-right: 100px; 
   margin-top: 260px; 
@@ -61,13 +60,13 @@ p{
 
 }
 .B4{
-  display:flex;
+  
   padding: 30px;
   margin-top: 160px;
   margin-left: 100px; 
 }
 .B5{
-  display:flex;
+ 
   padding: 30px;
   margin-top: 160px;
   margin-left: 100px; 
@@ -75,7 +74,7 @@ p{
   
 }
 .B6{
-  display:flex;
+  
   padding: 30px;
   margin-top: 160px;
   margin-right: 100px; 
@@ -87,26 +86,26 @@ p{
 }
 
 .B7{
-  display:flex;
+  
   padding: 30px;
   margin-top: 160px;
   margin-left: 100px; 
 }
 .B8{
-  display:flex;
+
   padding: 30px;
   margin-top: 160px;
   margin-left: 100px; 
 }
 .B9{
-  display:flex;
+ 
   padding: 30px;
   margin-top: 160px;
   margin-right: 100px; 
 }
 
 
-/* .bookList-container{
+.bookList-container{
   display:flex;
   flex-direction:row;
   flex-wrap: wrap;
@@ -116,7 +115,7 @@ p{
   margin:8rem ;
   margin-top: auto; 
 
-} */
+}
 
 
 
