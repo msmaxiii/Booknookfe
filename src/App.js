@@ -24,8 +24,7 @@ function App(props) {
   return (
     < div className="App">
       <NavBar/>
-      {/* <Home/> */}
-      {/* <About/> */}
+     
       
  <Switch>  
         <Route exact path='/'component={Home}/>
@@ -35,11 +34,7 @@ function App(props) {
        
   </Switch>  
 
-      {/* <BookItem />
-      {props.isLoading ? "Book LIST IS LOADING" : "Book LIST LOADED" }
-      <BookList /> */}
-      {/* {props.error !== "" ? props.error : ""} */}
-      {/* <BookList/> */}
+     
       <Footer/>
       
     </div>

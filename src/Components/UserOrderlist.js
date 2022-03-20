@@ -20,7 +20,7 @@ return(
     {props.isFetching ? 'FetchingBook':""}
     {props.error ? props.error:""}
     {props.BookList && props.BookList.map(book => 
-    <Books book ={book} favorite ={false} key ={book.id}/>)}
+    <Book book ={book} favorite ={false} key ={book.id}/>)}
 
 </div>
 )}

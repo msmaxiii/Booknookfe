@@ -4,9 +4,11 @@ import sign from '../image/logo.jpeg'
 const Home =()=>{
 return (
     <div>
-        <h1>The Book Nook </h1>
+        <h2>The Book Nook </h2>
         <p>Reading is Dreaming with Your Eyes Open</p>
-        <img src={sign} alt='images of books'/>
+        <br/>
+        <img src={sign} alt='images of books' width="1500px" height="700px"/>
+    
     </div>
 )
 }
