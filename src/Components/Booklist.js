@@ -14,15 +14,15 @@ const MapStateToProps =(state)=>({
 
 
 function BookList(props){
-    // console.log(props)
+    console.log(props)
     useEffect(()=>{
         props.fetchBook()
     },[])
-    const handleBookList=(e) => {
-      console.log(e.target.id)
-      props.addBook(e.target.id);
+    // const handleBookList=(e) => {
+    //   console.log(e.target.id)
+    //   props.addBook(e.target.id);
      
-    }
+    // }
     // console.log(props.bookList)
     return(
         
@@ -37,8 +37,5 @@ function BookList(props){
         </div>
     )
 }
-
-               
-
 
 export default connect(MapStateToProps,{fetchBook, addBook})(BookList)

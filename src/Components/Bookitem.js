@@ -13,15 +13,14 @@ const Book = (props)=>{
     return(
         <div className='book-container'> 
        
-        <h3>{props.book.title}</h3>
+             <h3>{props.book.title}</h3>
             <img src={props.book.image}alt='books'/>
-            <div>
+        <div>
             <button id ={props.book.id}onClick={handleBook}>
+             {props.books ?'Remove from Order':'Add to Order'}
+             </button>
 
-{props.books ?'Remove from Order':'Add to Order'}
-</button>
-
-            </div>
+        </div>
             </div>
     )
 }

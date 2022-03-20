@@ -109,11 +109,12 @@ p{
   display:flex;
   flex-direction:row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 100px;
+  text-align: center;
+  justify-content: space-around;
+  padding: 50px;
   border-radius: 2rem;
-  margin:8rem ;
   margin-top: auto; 
+  margin-left: auto;
 
 }
 
