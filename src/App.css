@@ -23,6 +23,10 @@ h2{
   color:#29a8d6 ;
   
 }
+h4{
+  font-size: small;
+  font-family: 10px;
+}
 
 p{
   text-align: center;
@@ -37,6 +41,7 @@ p{
 
 }
 .B1{
+  
   padding: 30px;
   margin-top: 260px;
   margin-left: 100px; 
