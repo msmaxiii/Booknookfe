@@ -22,6 +22,7 @@ axios
 })
 }
 export const addBook = (book)=>(dispatch)=>{
+    console.log(book)
     dispatch({type:FETCH_BOOK_START})
     axios
     .post("https://booknook2.herokuapp.com/book",book)
@@ -44,7 +45,7 @@ export const removeBook=(id,book)=>(dispatch)=>{
 }
 export const userOrder =(order)=>(dispatch)=>{
     dispatch ({type:USER_ORDER, payload: order})
-    
+    console.log(order)
     
 }
 

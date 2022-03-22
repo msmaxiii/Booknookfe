@@ -1,19 +1,22 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 const NavBar =()=>{
     return(
         <nav style = {container}>
-            <Link to ='/' style={{color:"#000"}}>Home</Link>
-            <Link to ='/About'>About</Link>
-            <Link to ='/BookList'>Books</Link>
-            <Link to ='/UserOrder'>Order</Link>
+            <NavLink to ='/' style={{color:"#000"}}>Home</NavLink>
+            <NavLink to ='/About' style={{color:"#000"}}>About</NavLink>
+             <NavLink to ='/BookList' style={{color:"#000"}}>Books</NavLink>
+             <NavLink to ='/UserOrder' style={{color:"#000"}}>Order</NavLink> 
+            
+            {/* <Link to ='/BookList'>Books</Link>
+            <Link to ='/UserOrder'>Order</Link> */}
         </nav>
     )
 }
 const container ={
     display: "flex",
     justifyContent: "space-around",
-    backgroundColor: "#29a8d6",
+    backgroundColor: "#4e8ab1",
     height: "50px"
  
 }

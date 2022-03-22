@@ -24,7 +24,8 @@ export default function reducer (state = initialState,action){
                 ...state,BookData:action.payload,error:"", isLoading:false
             }    
         case ADD_BOOK:
-            return{...state,book:[...state.book,action.payload]
+            console.log(action.payload)
+            return{...state,BookData:[...state.BookData,action.payload]
             }
         case UPDATE_BOOK:
             let updatedState=[]
@@ -32,22 +33,23 @@ export default function reducer (state = initialState,action){
                 if (state.BookData[i]._id === action.payload._id){
                     updatedState.push(action.payload)
                 } else{
-                    updatedState.push(state.Book[i])
+                    updatedState.push(state.BookData[i])
                 }
             }
             return {
-                ...state, ToDoData: updatedState
+                ...state, BookData: updatedState
             }
   
         case REMOVE_BOOK:
-            let newState = state.book.filter(book=>book!==action.payload)
+            let newState = state.BookData.filter(book=>book!==action.payload)
             return{
-                ...state,book:newState,
+                ...state,BookData:newState,
             }
             default:
                 return state
         
         case USER_ORDER:
+            console.dir(action.payload)
             return{
                 ...state,UserOrder:[...state.UserOrder,action.payload]
             }    

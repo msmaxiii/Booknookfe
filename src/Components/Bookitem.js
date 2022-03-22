@@ -1,14 +1,15 @@
 import { connect} from 'react-redux'
 import dummyData from '../dummyData'
-import { addBook,updateBook,removeBook,}from '../action/actions'
+import { addBook,updateBook,removeBook,userOrder}from '../action/actions'
 
 const Book = (props)=>{
-//  console.log(props.book)
-    const handleBook =(e)=>{
+ console.log(props.book)
+    const handleBook=(e)=>{
         console.log (e.target.id)
-        props.addBook(e.target.id);
-        props.updateBook (e.target.id);
-        props.removeBook.filter(e.target.id)
+        props.userOrder(props.book);
+        // props.updateBook (e.target.id);
+        // props.removeBook.filter(e.target.id)
+       
     }
     return(
         <div className='book-container'> 
@@ -16,7 +17,7 @@ const Book = (props)=>{
              <h3>{props.book.title}</h3>
             <img src={props.book.image}alt='books'/>
         <div>
-            <button id ={props.book.id}onClick={handleBook}>
+            <button id ={props.book}onClick={handleBook}>
              {props.books ?'Remove from Order':'Add to Order'}
              </button>
 
@@ -25,4 +26,4 @@ const Book = (props)=>{
     )
 }
 
-export default connect(null,{addBook,updateBook,removeBook})(Book);
+export default connect(null,{addBook,updateBook,removeBook,userOrder})(Book);

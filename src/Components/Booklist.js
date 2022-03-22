@@ -14,7 +14,7 @@ const MapStateToProps =(state)=>({
 
 
 function BookList(props){
-    console.log(props)
+    // console.log(props)
     useEffect(()=>{
         props.fetchBook()
     },[])
@@ -27,12 +27,11 @@ function BookList(props){
     return(
         
         <div className ='bookList-container'>
-            
-            {/* {props.isFetching ? 'FetchingBook':""}
-            {props.error ? props.error:""} */}
+            {props.isFetching ? 'FetchingBook':""}
+            {props.error ? props.error:""}
             {props.bookList.length > 0 ? props.bookList.map(book =>
              <Book book={book} />):"loading"}
-             
+              
             
         </div>
     )
