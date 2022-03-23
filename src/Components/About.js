@@ -42,13 +42,13 @@ return (
        </div>
 </div>
 <div id="box3">
-       <div className ="B7" style={{ backgroundImage: `url(${DIRT})`,height:"280px",width:"140px",backgroundSize:"cover"}}>
+       <div className ="B7" style={{ backgroundImage: `url(${DIRT})`,height:"280px",width:"150px",backgroundSize:"cover"}}>
        </div>
 
-       <div className ="B8" style={{ backgroundImage: `url(${BLACK_DOG})`,height:"280px",width:"140px",backgroundSize:"cover"}}>
+       <div className ="B8" style={{ backgroundImage: `url(${BLACK_DOG})`,height:"280px",width:"160px",backgroundSize:"cover"}}>
        </div>
 
-       <div className ="B9" style={{ backgroundImage: `url(${SKIN_GAME})`,height:"280px",width:"140px",backgroundSize:"cover"}}>
+       <div className ="B9" style={{ backgroundImage: `url(${SKIN_GAME})`,height:"280px",width:"160px",backgroundSize:"cover"}}>
        </div> 
     
 </div>     

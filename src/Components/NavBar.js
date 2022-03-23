@@ -8,8 +8,7 @@ const NavBar =()=>{
              <NavLink to ='/BookList' style={{color:"#000"}}>Books</NavLink>
              <NavLink to ='/UserOrder' style={{color:"#000"}}>Order</NavLink> 
             
-            {/* <Link to ='/BookList'>Books</Link>
-            <Link to ='/UserOrder'>Order</Link> */}
+           
         </nav>
     )
 }
